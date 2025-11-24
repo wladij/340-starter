@@ -150,14 +150,168 @@ nav ul li a:hover {
 }
 
 /* ---------- Inventory display (if any future use) ---------- */
+/* === Inventory Grid === */
+#inv-display {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 2rem;
+  list-style: none;
+  padding: 0;
+  margin: 2rem 0;
+}
+
+/* Each vehicle card */
 #inv-display li {
-  margin: 20px;
+  background: #ffffff;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.10);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+/* Hover effect */
+#inv-display li:hover {
+  transform: translateY(-6px);
+  box-shadow: 0px 6px 18px rgba(0, 0, 0, 0.20);
+}
+
+/* Vehicle image */
+#inv-display img {
+  width: 100%;
+  height: 180px;
+  object-fit: cover;
+  display: block;
+}
+
+/* Name + Price container */
+.namePrice {
+  padding: 1rem 1.2rem;
+  text-align: center;
+}
+
+.namePrice hr {
+  border: none;
+  height: 1px;
+  background: #e6e6e6;
+  margin-bottom: 1rem;
+}
+
+/* Vehicle title */
+.namePrice h2 {
+  font-size: 1.1rem;
+  margin: 0.5rem 0;
 }
 
 .namePrice h2 a {
+  color: #333;
   text-decoration: none;
-  color: black;
+  font-weight: 700;
+  transition: color 0.2s ease;
 }
+
+.namePrice h2 a:hover {
+  color: #1a73e8;
+}
+
+/* Price */
+.namePrice span {
+  display: inline-block;
+  font-size: 1.2rem;
+  font-weight: 700;
+  color: #1a73e8;
+  margin-top: 0.5rem;
+}
+
+/* No results message */
+.notice {
+  text-align: center;
+  padding: 2rem;
+  font-size: 1.2rem;
+  color: #777;
+}
+
+/*----- Erros message -----*/
+.funny-error {
+  margin-top: 1rem;
+  padding: .5rem 1rem;
+  background: #f5f5f5;
+  border-left: 4px solid #aaa;
+  border-radius: 4px;
+  font-size: 1rem;
+}
+
+.return-home {
+  display: inline-block;
+  margin-top: 1rem;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+/* ===== DETAIL PAGE LAYOUT ===== */
+#inv-detail {
+  display: grid;
+  grid-template-columns: 1.2fr 1fr;
+  gap: 2rem;
+  align-items: start;
+  margin: 2rem auto;
+  padding: 1rem;
+  max-width: 1100px;
+  font-family: "Segoe UI", Roboto, sans-serif;
+}
+
+/* ===== LEFT SIDE: MAIN IMAGE ===== */
+.inv-detail-image img {
+  width: 100%;
+  border-radius: 8px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+}
+
+/* ===== RIGHT SIDE: INFORMATION ===== */
+.inv-detail-info {
+  padding: 1rem 1rem;
+  background: #ffffff;
+  border-radius: 8px;
+  box-shadow: 0 3px 8px rgba(0,0,0,0.15);
+}
+
+.inv-detail-info h2 {
+  font-size: 1.8rem;
+  margin-bottom: 0.3rem;
+  color: #222;
+  font-weight: 600;
+}
+
+/* PRICE BADGE */
+.inv-detail-info .price {
+  display: inline-block;
+  background: #f5f5f5;
+  padding: 0.6rem 1rem;
+  border-radius: 6px;
+  font-size: 1.6rem;
+  font-weight: bold;
+  color: #047857;
+  border: 2px solid #047857;
+  margin: 0.5rem 0 1rem;
+}
+
+/* ===== INFO LIST ===== */
+.inv-detail-list {
+  list-style: none;
+  padding: 0;
+  margin-top: 1rem;
+}
+
+.inv-detail-list li {
+  padding: 0.4rem 0;
+  border-bottom: 1px solid #eee;
+  font-size: 1rem;
+}
+
+.inv-detail-list li strong {
+  color: #444;
+}
+
+
 
 /* ---------- Responsive adjustments ---------- */
 @media (max-width: 768px) {
@@ -185,5 +339,16 @@ nav ul li a:hover {
   .features {
     flex-direction: column-reverse;
     gap: 0;
+  }
+}
+
+/* ===== RESPONSIVE INVDETAIL===== */
+@media screen and (max-width: 900px) {
+  #inv-detail {
+    grid-template-columns: 1fr;
+  }
+
+  .inv-detail-info {
+    margin-top: 1rem;
   }
 }

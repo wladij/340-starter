@@ -1,0 +1,17 @@
+<% if (title) { %>
+  <h1><%= title %></h1>
+<% } else { %>
+  <% res.redirect('/') %>
+<% } %>
+
+<p class="notice">
+  <%- message %>
+</p>
+
+<div class="funny-error">
+  <p>😅 Looks like this road wasn’t on the GPS...</p>
+  <p>But don’t worry— even the best drivers get lost sometimes.</p>
+  <p>🚗💨 Let’s get you back on track.</p>
+</div>
+
+<a href="/" class="return-home">Return to Home</a>
