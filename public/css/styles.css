@@ -342,7 +342,7 @@ nav ul li a:hover {
   }
 }
 
-/* ===== RESPONSIVE INVDETAIL====== */
+/* ===== RESPONSIVE INVDETAIL===== */
 @media screen and (max-width: 900px) {
   #inv-detail {
     grid-template-columns: 1fr;
