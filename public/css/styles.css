@@ -311,7 +311,289 @@ nav ul li a:hover {
   color: #444;
 }
 
+/* ================
+   Login Page Styles
+   Clean – Modern – Professional
+   ================ */
 
+
+/* Page Container */
+.form-container {
+  max-width: 420px;
+  margin: 70px auto;
+  padding: 2rem;
+  background: #c9cccc;
+  border-radius: 16px;
+  box-shadow: 0 5px 25px rgba(0,0,0,0.08);
+  animation: fadeIn 0.4s ease;
+}
+
+/* Fade animation */
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(10px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+
+/* Title */
+.form-container h1 {
+  text-align: center;
+  margin-bottom: 1.5rem;
+  font-size: 2rem;
+  color: #111827;
+}
+
+/* Flash Messages */
+.flash {
+  background: #c6ddc4;
+  border-left: 4px solid #19a719;
+  padding: 0.8rem;
+  border-radius: 8px;
+  margin-bottom: 1rem;
+}
+
+.flash p {
+  color: #19a719;
+  font-size: 0.95rem;
+}
+
+/* Form Inputs */
+.login-form {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.login-form label {
+  font-size: 0.95rem;
+  color: #374151;
+  margin-bottom: 0.3rem;
+}
+
+.login-form input {
+  padding: 0.7rem 1rem;
+  border: 1px solid #d1d5db;
+  border-radius: 10px;
+  font-size: 1rem;
+  transition: 0.2s ease;
+}
+
+.login-form input:focus {
+  outline: none;
+  border-color: #2563eb;
+  box-shadow: 0 0 0 3px rgba(37, 99, 235, 0.25);
+}
+
+/* Button */
+.login-form button {
+  padding: 0.8rem;
+  border: none;
+  background: #2563eb;
+  color: #fff;
+  font-size: 1.05rem;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: 0.25s;
+  margin-top: 0.5rem;
+}
+
+.login-form button:hover {
+  background: #1e40af;
+}
+
+/* Register Link */
+.register-link {
+  text-align: center;
+  margin-top: 1.2rem;
+  font-size: 0.95rem;
+}
+
+.register-link a {
+  color: #2563eb;
+  text-decoration: none;
+  font-weight: 600;
+}
+
+.register-link a:hover {
+  text-decoration: underline;
+}
+
+
+/* Container register*/
+.form-register {
+  max-width: 450px;
+  margin: 3rem auto;
+  padding: 2rem;
+  background: #c9cccc;
+  border-radius: 12px;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+}
+
+.form-register h1 {
+  text-align: center;
+  margin-bottom: 1.5rem;
+}
+
+/* Flash messages */
+#flashRegister {
+  background: #ffe8e8;
+  border-left: 4px solid #991b1b;
+  padding: 0.8px;
+  margin-bottom: 1rem;
+  border-radius: 6px;
+}
+
+#flashRegister p {
+  margin: 0;
+  color: #991b1b;
+}
+
+/* Form */
+.register-form label {
+  display: block;
+  margin-top: 1rem;
+  font-weight: bold;
+}
+
+.register-form input {
+  width: 100%;
+  padding: 10px;
+  margin-top: 5px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  font-size: 1rem;
+}
+
+/* Password wrapper */
+.password-wrapper {
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+
+.password-wrapper button {
+  margin-left: 10px;
+  padding: 8px 14px;
+  background: #ddd;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+.password-wrapper button:hover {
+  background: #cfcfcf;
+}
+
+/* Button */
+.submit-register {
+  width: 100%;
+  margin-top: 1.8rem;
+  padding: 12px;
+  background: #1e90ff;
+  color: white;
+  font-size: 1.1rem;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+.submit-register:hover {
+  background: #0f70cc;
+}
+
+
+/* ===== MANAGE LINKS ===== */
+.manage-links {
+  list-style: none;
+  padding: 0;
+  margin-top: 2rem;
+}
+
+.manage-links li {
+  margin: 1rem 0;
+}
+
+.manage-links a {
+  display: block;
+  padding: 1rem;
+  background: #c9cccc;
+  color: rgb(19, 14, 14);
+  text-align: center;
+  border-radius: 8px;
+  text-decoration: none;
+  font-size: 1.1rem;
+  font-weight: 500;
+  transition: background 0.25s ease;
+}
+
+.manage-links a:hover {
+  background: #555a5a;
+}
+
+/* ===== FORMS ===== */
+#inventoryClassificationForm {
+  display: flex;
+  flex-direction: column;
+  gap: 1.2rem;
+}
+
+#inventoryClassificationForm label {
+  font-size: 1rem;
+  font-weight: 600;
+  color: #333;
+}
+
+#inventoryClassificationForm input, select, textarea, button {
+  width: 100%;
+}
+
+#inventoryClassificationForm input, textarea, select {
+  padding: 0.75rem;
+  border-radius: 8px;
+  border: 1px solid #ccc;
+  font-size: 1rem;
+  transition: border 0.25s ease;
+}
+
+#inventoryClassificationForm input:focus, textarea:focus, select:focus {
+  border-color: #0066ff;
+  outline: none;
+}
+
+/* Textarea sizing */
+#inventoryClassificationForm textarea {
+  min-height: 100px;
+  resize: vertical;
+}
+
+/* ===== SUBMIT BUTTON ===== */
+#inventoryClassificationForm button {
+  margin-top: 1rem;
+  padding: 0.9rem;
+  background: #555a5a;
+  color: white;
+  font-size: 1.1rem;
+  font-weight: 600;
+  border: none;
+  cursor: pointer;
+  border-radius: 8px;
+  transition: background 0.25s ease;
+}
+
+#inventoryClassificationForm button:hover {
+  background: #1c7a34;
+}
+
+/* ===== RESPONSIVE ===== */
+@media (max-width: 600px) {
+ 
+  .manage-links a {
+    font-size: 1rem;
+  }
+
+  #inventoryClassificationForm button {
+    font-size: 1rem;
+  }
+}
 
 /* ---------- Responsive adjustments ---------- */
 @media (max-width: 768px) {
@@ -342,6 +624,8 @@ nav ul li a:hover {
   }
 }
 
+
+
 /* ===== RESPONSIVE INVDETAIL===== */
 @media screen and (max-width: 900px) {
   #inv-detail {
@@ -350,5 +634,17 @@ nav ul li a:hover {
 
   .inv-detail-info {
     margin-top: 1rem;
+  }
+}
+
+/* Responsive Form*/
+@media (max-width: 480px) {
+  .form-container {
+    margin: 30px 20px;
+    padding: 1.5rem;
+  }
+
+  .form-container h1 {
+    font-size: 1.6rem;
   }
 }

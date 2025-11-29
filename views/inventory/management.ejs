@@ -1,0 +1,14 @@
+<main class="manage-container">
+  <h1><%= title %></h1>
+
+  <% if (notice && notice.length) { %>
+    <div class="flash">
+      <% notice.forEach(m => { %><p><%= m %></p><% }) %>
+    </div>
+  <% } %>
+
+  <ul class="manage-links">
+    <li><a href="/inv/add-classification">Add Classification</a></li>
+    <li><a href="/inv/add-inventory">Add Inventory Item</a></li>
+  </ul>
+</main>
